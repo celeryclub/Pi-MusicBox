@@ -15,7 +15,7 @@ Make sure there is enough space on the SD Card. Use the command raspi-config to 
 
 Issue this command. This will prevent the system from installing unnecessary packages. This command takes care that the apt-system doesn’t fill up the SD Card with stuff you don’t need. If you don’t care about a bit of wasted space, or you use your system for other purposes, skip it.
 
-    echo -e 'APT::Install-Recommends "0";\nAPT::Install-Suggests "0";\n' > /etc/apt/apt.conf
+    echo -e 'APT::Install-Recommends "0";\\nAPT::Install-Suggests "0";\\n' > /etc/apt/apt.conf
 
 The file /etc/apt/sources.list should contain all Raspbian repositories, including non-free (for the wireless firmware). Make sure the file contains these lines (not only with the 'main', but also 'contrib', etc):
 
